@@ -1,16 +1,27 @@
-var pole;
-var wynik;
+var score = "";
+
+function Temperature(value) {
+	this.value = value
+	this.score_f = value * 1.8 + 32
+	this.score_k = value * 1 + 273.15
+	this.f = {
+		score : "Wynik w Fahrenheitach: " + this.score_f + "."
+	};
+	this.k = {
+		score : "Wynik w Kelvinach: " + this.score_k + "."
+	};
+}
 
 function fahrenheit() {
-  pole = document.getElementById("wartosc").value;
-  wynik = pole * 1.8 + 32;
+	let fahrenheit_value = document.getElementById("wartosc").value;
+	let fahrenheit = new Temperature(fahrenheit_value)
 
-  document.getElementsById("wynik").innerHTML = "Wynik przeliczenia w Fahrenheitach: "+wynik;
+	document.getElementById("wynik").innerHTML = fahrenheit.f.score;
 }
 
 function kelvin() {
-  pole = document.getElementById("wartosc").value;
-  wynik = pole + 273.15;
+	let kelvin_value = document.getElementById("wartosc").value;
+	let kelvin = new Temperature(kelvin_value)
 
-  document.getElementById("wynik").innerHTML = "Wynik przeliczenia w Kelvinach: "+wynik;
+	document.getElementById("wynik").innerHTML = kelvin.k.score;
 }
