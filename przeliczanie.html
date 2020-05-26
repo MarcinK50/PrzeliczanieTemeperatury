@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="przeliczanie_css.css" />
   </head>
   <body>
-    Podaj temperaturę w <sup>o</sup>C
-    <input type="text" id="wartosc" />
-    <input type="submit" id="n-f" value="Na Fahrenheity" onclick="fahrenheit()" />
-    <input type="submit" id="n-k" value="Na Kelviny" onclick="kelvin()" />
-    <div id="wynik"></div>
+	<center>
+		Podaj temperaturę w <input type="radio" id="celcius" />Celsjuszach
+		<input type="radio" id="fahrenheit" />Fahrenheitach
+		<input type="radio" id="kelvin" />Kelvinach<br /><br />
+		<input type="text" id="wartosc" /><br /><br />
+		<input type="submit" id="n-f" value="Na Fahrenheity" onclick="fahrenheit()" />
+		<input type="submit" id="n-k" value="Na Kelviny" onclick="kelvin()" />
+		<input type="submit" id="n-c" value="Na Celsjusze" onclick="celcius()" />
+		<div id="wynik"></div>
+	</center>
   </body>
 </html>
