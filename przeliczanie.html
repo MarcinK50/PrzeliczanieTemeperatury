@@ -8,13 +8,15 @@
   </head>
   <body>
 	<center>
-		Podaj temperaturę w <input type="radio" id="celcius" />Celsjuszach
-		<input type="radio" id="fahrenheit" />Fahrenheitach
-		<input type="radio" id="kelvin" />Kelvinach<br /><br />
-		<input type="text" id="wartosc" /><br /><br />
-		<input type="submit" id="n-f" value="Na Fahrenheity" onclick="fahrenheit()" />
-		<input type="submit" id="n-k" value="Na Kelviny" onclick="kelvin()" />
-		<input type="submit" id="n-c" value="Na Celsjusze" onclick="celcius()" />
+		<form name="main">
+			Podaj temperaturę w<input type="radio" name="temperature" onclick="celcius()"/>Celsjuszach
+			<input type="radio" name="temperature" onclick="fahrenheit()"/>Fahrenheitach
+			<input type="radio" name="temperature" onclick="kelvin()"/>Kelvinach<br /><br />
+			<input type="text" id="wartosc" /><br /><br />
+			<input type="submit" id="n-f" value="Na Fahrenheity" onclick="fahrenheit()" />
+			<input type="submit" id="n-k" value="Na Kelviny" onclick="kelvin()" />
+			<input type="submit" id="n-c" value="Na Celsjusze" onclick="celcius()" />
+		</form>
 		<div id="wynik"></div>
 	</center>
   </body>
